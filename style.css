@@ -452,6 +452,76 @@ a.btn:nth-child(2)::before {
   line-height: 1.6;
 }
 
+/*Skills section css ------------------------------------------------------*/
+
+.skills {
+  background: var(--second-bg-color);
+}
+
+.skill-main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: 30px;
+  grid-column-gap: 50px;
+}
+
+.skill-bar {
+  margin-bottom: 2.3rem;
+}
+
+.skill-main h3 {
+  margin-bottom: 2rem;
+  font-size: var(--normal-font);
+  text-align: center;
+}
+
+.skill-left .skill-bar .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.skill-left .skill-bar .bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-color);
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skill-bar .bar span {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--hover-color);
+  border-radius: 25px;
+  box-shadow: var(--neon-box-shadow);
+}
+
+.skill-bar .bar .html {
+  width: 90%;
+  animation: html 2s;
+}
+
+.skill-bar .bar .css {
+  width: 70%;
+  animation: css 3s;
+}
+
+.skill-bar .bar .figma {
+  width: 70%;
+  animation: figma 4s;
+}
+
+.skill-bar .bar .javascript {
+  width: 95%;
+  animation: javascript 5s;
+}
+
 /*Keyframes ------------------------------------------------------*/
 @keyframes morph {
   0%,
@@ -466,5 +536,41 @@ a.btn:nth-child(2)::before {
   }
   80% {
     border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes figma {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
   }
 }
