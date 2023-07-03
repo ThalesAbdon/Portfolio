@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 * {
   padding: 0;
@@ -23,6 +33,20 @@
     0 0 40px rgba(18, 247, 255, 0.3), 0 0 70px rgba(18, 247, 255, 0.3),
     0 0 80px rgba(18, 247, 255, 0.3), 0 0 100px rgba(18, 247, 255, 0.3),
     0 0 150px rgba(18, 247, 255, 0.3);
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--second-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover-color);
+  border-radius: 5rem;
 }
 
 body {
@@ -720,15 +744,31 @@ section {
   cursor: pointer;
   font-size: 1rem;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+
+/*footer ------------------------------------------------------*/
+footer {
+  padding: 1.5rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+footer p {
+  color: #bdbdbd;
+}
+
+footer a {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--text-color);
+  background: var(--hover-color);
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+
+footer a i {
+  font-size: 1rem;
+  color: var(--second-bg-color);
 }
 /*Keyframes ------------------------------------------------------*/
 @keyframes morph {
